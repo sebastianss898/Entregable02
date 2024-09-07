@@ -1,0 +1,131 @@
+public interface IEquipo
+{
+    void AddJugador(Jugador jugador);
+    int GetPuntosEquipo();
+}
+
+public class Jugador
+{
+    private string nombre;
+    private string posicion;
+    private int habilidad;
+
+    public string Nombre
+    {
+        get { return nombre; }
+        set { nombre = value; }
+    }
+    public string Posicion
+    {
+        get { return posicion; }
+        set { posicion = value; }
+    }
+    public int Habilidad
+    {
+        get { return habilidad; }
+        set { habilidad = value; }
+    }
+
+    public Jugador(string nombre, string posicion, int habilidad)
+    {
+        this.nombre = nombre;
+        this.posicion = posicion;
+        this.habilidad = habilidad;
+    }
+}
+
+public class Equipo : IEquipo
+{
+    public List<Jugador> jugadores = new List<Jugador>();
+
+    public void AddJugador(Jugador jugador)
+    {
+        if (jugadores.Count < 3)
+        {
+            jugadores.Add(jugador);
+        }
+    }
+
+    public int GetPuntosEquipo()
+    {
+        int puntos = 0;
+        foreach (var jugador in jugadores)
+        {
+            puntos += jugador.Habilidad;
+        }
+        return puntos;
+    }
+    public void ImprimirJugadores()
+    {
+        Console.WriteLine("Jugadores del equipo:");
+        foreach (var jugador in jugadores)
+        {
+            Console.WriteLine($"Nombre: {jugador.Nombre}, Posición: {jugador.Posicion}, Habilidad: {jugador.Habilidad}");
+        }
+    }
+}
+
+
+public class program2
+{
+    public static void Main()
+    {
+        List<Jugador> jugadores = new List<Jugador>
+        {
+            new Jugador("Raton", "guardia", 8),
+            new Jugador("Arles", "guardia", 6),
+            new Jugador("jonathan", "central", 7),
+            new Jugador("jhon", "central", 5),
+            new Jugador("Miguel", "defensa", 9),
+            new Jugador("jose", "defensa", 4)
+        };
+
+        Random alt = new Random();
+        Equipo equipo1 = new Equipo();
+        Equipo equipo2 = new Equipo();
+
+        while (jugadores.Count > 0)
+        {
+            int index = alt.Next(jugadores.Count);
+            Jugador selectJugador = jugadores[index];
+            jugadores.RemoveAt(index);
+
+            if (equipo1.GetPuntosEquipo() < equipo2.GetPuntosEquipo())
+            {
+                equipo1.AddJugador(selectJugador);
+            }
+            else
+            {
+                equipo2.AddJugador(selectJugador);
+            }
+        }
+
+        int equipo1puntos = equipo1.GetPuntosEquipo();
+        int equipo2puntos = equipo2.GetPuntosEquipo();
+
+        Console.WriteLine($"Los puntos del equipo 1 son: {equipo1puntos}");
+        Console.WriteLine($"Los puntos del equipo 2 son: {equipo2puntos}");
+
+        if (equipo1puntos > equipo2puntos)
+        {
+            Console.WriteLine($"El ganador es el equipo #1 con {equipo1puntos} puntos");
+        }
+        else if (equipo1puntos < equipo2puntos)
+        {
+            Console.WriteLine($"El ganador es el equipo #2 con {equipo2puntos} puntos");
+        }
+        else
+        {
+            Console.WriteLine("es un empate ");
+        }
+
+        Console.WriteLine("\nEquipo 1:");
+        equipo1.ImprimirJugadores();
+
+        Console.WriteLine("\nEquipo 2:");
+        equipo2.ImprimirJugadores();
+
+
+    }
+
+}

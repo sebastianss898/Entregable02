@@ -1,0 +1,15 @@
+D:\Desktop\sebas\Entregable_2\Entregable_02\bin\Debug\net8.0\Entregable_02.exe
+D:\Desktop\sebas\Entregable_2\Entregable_02\bin\Debug\net8.0\Entregable_02.deps.json
+D:\Desktop\sebas\Entregable_2\Entregable_02\bin\Debug\net8.0\Entregable_02.runtimeconfig.json
+D:\Desktop\sebas\Entregable_2\Entregable_02\bin\Debug\net8.0\Entregable_02.dll
+D:\Desktop\sebas\Entregable_2\Entregable_02\bin\Debug\net8.0\Entregable_02.pdb
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.AssemblyInfoInputs.cache
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.AssemblyInfo.cs
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.csproj.CoreCompileInputs.cache
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.dll
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\refint\Entregable_02.dll
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.pdb
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.genruntimeconfig.cache
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\ref\Entregable_02.dll
+D:\Desktop\sebas\Entregable_2\Entregable_02\obj\Debug\net8.0\Entregable_02.sourcelink.json
